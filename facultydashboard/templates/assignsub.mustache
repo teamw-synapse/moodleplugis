@@ -1,0 +1,28 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User Name</th>
+      <th>User ID</th>
+      <th>Assignment Name</th>  
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      <th>Marking</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#subdata}}
+    <tr>
+
+      <td>{{student_name}}</td>
+      <td>{{student_id}}</td>
+      <td>{{assignment}}</td>
+      <td>{{submitteddate}}</td>
+      <td>{{final_grade}}</td>
+      <td><a style= "color: darkturquoise;cursor: pointer;" href="{{marking_grade}}" target="_blank">marking</a></td>
+
+    </tr>
+   {{/subdata}}
+  </tbody>
+</table>

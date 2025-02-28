@@ -1,0 +1,141 @@
+.block_facultydashboard .tab-content {
+      display: block;
+    }
+.block_facultydashboard .tab-content.active {
+      display: block;
+    }
+.block_facultydashboard .nav-link {
+      cursor: pointer;
+    }
+
+    
+    .block_facultydashboard .container{
+  padding: 10px;
+ }
+  .block_facultydashboard .tab.active {
+  font-weight: bold;
+  color: blue; /* Change color of active tab */
+  background-color:green    ; /* Background color of active tab */
+}
+
+ .block_facultydashboard .nav-link.active:hover {
+  background-color: blue; /* Hover effect for active tab */
+}
+    
+  /* Styles for cards */
+  .block_facultydashboard .tcourse-slider {
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  .block_facultydashboard .tcourse-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .block_facultydashboard .tcourse-card {
+    flex: 0 0 auto;
+    margin-right: 15px; /* Adjust margin between cards */
+  }
+  /* Styles for slider buttons */
+  .block_facultydashboard .slider-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  /* Custom styles for course cards */
+  .block_facultydashboard .course-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust margin between cards */
+  }
+  .block_facultydashboard .course-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc; /* Add a border at the bottom of the image */
+  }
+  .block_facultydashboard .course-details {
+    padding: 15px;
+    color: black;
+  }
+  .block_facultydashboard .course-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .block_facultydashboard .card-text {
+    margin-bottom: 10px;
+  }
+  .block_facultydashboard .completion-days-container {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  /*.block_facultydashboard .button:hover {
+      background: #06D85F;
+    }*/
+  .block_facultydashboard .days {
+    margin-bottom: 0;
+  }
+
+ .block_facultydashboard .card1 {
+  background-color: #ebd57c;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 3px 5px 9px rgba(20, 10, 10, 11.10);
+}
+
+ .block_facultydashboard .col-md-9 {
+    -ms-flex: 0 0 75%;
+    max-width: 60%;
+}
+
+ .block_facultydashboard .card-body {
+  padding: 0.25rem;
+}
+
+.block_facultydashboard .card-header b{
+  font-size: 30px; 
+  color: white;
+}
+
+.block_facultydashboard .container-fluid h2{
+  text-align: center;
+}
+
+.block_facultydashboard .card-title1 b{
+  font-size: 30px; 
+  color: white;
+}
+
+.block_facultydashboard .course-title a{
+  color: darkturquoise;
+}
+.block_facultydashboard .col-6 {
+
+    height: 40px;
+}
+.block_facultydashboard .dashboard-card .dashboard-card-img{
+  /*  background-size: 520px 170px !important;*/
+  background-size: contain;
+}
+
+.block_facultydashboard .course-name-right {
+    margin-left: 28rem !important;
+    font-size: 0.75rem;
+}
+.block_facultydashboard .dashboard-card .dashboard-card-img .course-category{
+    margin-top: 15px !important;
+    background-color: #277891;
+    color: #fff;
+    padding: 4px 6px;
+    margin-bottom: 0.25rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    font-size: 80%;
+}
+.block_facultydashboard a{
+  cursor: pointer;
+}

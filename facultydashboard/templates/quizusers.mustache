@@ -1,0 +1,28 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User Name</th>
+      <th>User ID</th>
+      <th>Quiz Name</th>
+      <th>Stataus</th>     
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#quizdata}}
+    <tr>
+
+      <td>{{student_name}}</td>
+      <td>{{student_id}}</td>
+      <td>{{course_name}}</td>
+      <td>{{quiz_name}}</td>    
+      <td>{{submitted_date}}</td>
+      <td>{{final_grade}}</td>
+
+    </tr>
+   {{/quizdata}}
+  </tbody>
+</table>

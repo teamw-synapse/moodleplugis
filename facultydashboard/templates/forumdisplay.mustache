@@ -1,0 +1,24 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Forum Name</th>
+      <th>Course Name</th>
+      <th>User Count</th>
+      <th>Submitted Count</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#forum}}
+    <tr>
+
+      <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" href="{{forum_url}}" target="_blank">{{forum_name}}</a></td>
+      <td>{{course_name}}</td>
+      <td><a style= "color: darkturquoise;cursor: pointer;" onclick="(function(e){ require('block_facultydashboard/forumuser').init({forumid:{{forumid}},courseid:{{courseid}} }) })(event)">{{user_count}}</a></td>
+      <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_facultydashboard/forumsub').init({forumid:{{forumid}},courseid:{{courseid}} }) })(event)">{{submission_count}}</a></td>
+
+    </tr>
+   {{/forum}}
+  </tbody>
+</table>

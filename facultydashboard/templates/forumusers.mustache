@@ -1,0 +1,28 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User Name</th>
+      <th>User ID</th>
+      <th>Forum Name</th>
+      <th>Stataus</th>     
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#forumdata}}
+    <tr>
+
+      <td>{{student_name}}</td>
+      <td>{{student_id}}</td>
+      <td>{{course_name}}</td>
+      <td>{{forum}}</td>    
+      <td>{{submission_date}}</td>
+      <td>{{final_grade}}</td>
+
+    </tr>
+   {{/forumdata}}
+  </tbody>
+</table>

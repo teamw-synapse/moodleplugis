@@ -1,0 +1,24 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Assignment Name</th>
+      <th>Course Name</th>
+      <th>User Count</th>
+      <th>Submitted Count</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#assignment}}
+    <tr>
+
+      <td><a style= "color: darkturquoise;cursor: pointer;" href="{{assign_url}}" target="_blank">{{assign_name}}</a></td>
+      <td>{{course_name}}</td> 
+      <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_facultydashboard/assignuser').init({assignid:{{assignid}},courseid:{{courseid}} }) })(event)">{{user_count}}</a></td>
+      <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_facultydashboard/assignsub').init({assignid:{{assignid}},courseid:{{courseid}} }) })(event)">{{submission_count}}</a></td>
+
+    </tr>
+   {{/assignment}}
+  </tbody>
+</table>

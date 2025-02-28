@@ -1,0 +1,30 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User Name</th>
+      <th>User ID</th>
+      <th>Quiz Name</th>
+      <th>Stataus</th>     
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      <th>Marking Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#quizgrade}}
+    <tr>
+
+      <td>{{student_name}}</td>
+      <td>{{student_id}}</td>
+      <td>{{course_name}}</td>
+      <td>{{quiz_name}}</td>    
+      <td>{{submitted_date}}</td>
+      <td>{{final_grade}}</td>
+      <td><a style= "color: darkturquoise;cursor: pointer;" href="{{marking_grade}}" target="_blank">marking</a></td>
+
+    </tr>
+   {{/quizgrade}}
+  </tbody>
+</table>

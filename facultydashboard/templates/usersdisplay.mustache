@@ -1,0 +1,24 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>Course Status</th>
+     
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#users}}
+    <tr>
+
+      <td>{{id_number}}</td>
+      <td>{{user_name}}</td>
+      <td>{{user_email}}</td>
+      <td>{{course_status}}</td>
+    </tr>
+   {{/users}}
+  </tbody>
+</table>

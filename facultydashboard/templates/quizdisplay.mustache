@@ -1,0 +1,24 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Quiz Name</th>
+      <th>Course Name</th>
+      <th>User Count</th>
+      <th>Submitted Count</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#quiz}}
+    <tr>
+
+      <td><a style= "color: darkturquoise;cursor: pointer;" href="{{quiz_url}}" target="_blank">{{quiz_name}}</a></td>
+      <td>{{course_name}}</td>
+      <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_facultydashboard/quizuser').init({quizid:{{quizid}},courseid:{{courseid}} }) })(event)">{{user_count}}</a></td>
+       <td><a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_facultydashboard/quizsub').init({quizid:{{quizid}},courseid:{{courseid}} }) })(event)">{{submission_count}}</a></td>
+
+    </tr>
+   {{/quiz}}
+  </tbody>
+</table>

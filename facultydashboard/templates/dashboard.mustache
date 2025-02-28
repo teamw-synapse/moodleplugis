@@ -1,0 +1,52 @@
+{{#response}}
+{{#viewtypeCard}}
+<div class="container-fluid">
+    <div class="row1">
+        <div class="col-md-9">
+         
+            <div class="card1">
+             
+                <div class="card-header">
+                    <b>Total Courses: {{totalcount}}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+    
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="myCourses" role="tabpanel" aria-labelledby="myCourses-tab">
+    <div class="tcourse-slider">
+    <div class="tcourse-slides">
+      {{#records}}
+        <div class="tcourse-card card">
+          <div class="card-body">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUFkyOSPu57T6zqefwXmaHrvh8MNBcC-QgPM9nwXpllA&s" class="course-img" alt="Course Image">
+            <div class="course-details">
+              <h5 class="course-title" title="{{my_coursesfull}}"> <a href="{{url}}" target="_blank">{{my_courses}}</a></h5>
+            <div class="completion-days-container" style="font-size: 11px">
+                <p class="days"><h6 class="completion"><b>Start: {{startdate}}</b></h6></p>
+                <p class="days"><h6 class="days"><b>End: {{enddate}}</b></h6></p>
+            </div>
+             <div class="completion-days-container">
+              <p class="days"><a onclick="(function(e){ require('block_facultydashboard/getuser').init({userid:{{userid}},courseid:{{courseid}},type:'student' }) })(event)"><h6 class="button">Users: {{studentcount}}</h6></a></p>          
+                <p class="days"><a onclick="(function(e){ require('block_facultydashboard/getassign').init({userid:{{userid}},courseid:{{courseid}} }) })(event)"><h6 class="button">Assignments: {{assign_count}}</h6></a></p>
+            </div>
+             <div class="completion-days-container">
+              <p class="days"><a onclick="(function(e){ require('block_facultydashboard/getquiz').init({userid:{{userid}},courseid:{{courseid}} }) })(event)"><h6 class="button">Quizzes: {{quiz_count}}</h6></a></p>
+              <p class="days"><a onclick="(function(e){ require('block_facultydashboard/getforum').init({userid:{{userid}},courseid:{{courseid}} }) })(event)"><h6 class="button">Forums: {{forum_count}}</h6></a></p>
+            </div> 
+           </div>
+          </div>
+        </div>
+        {{/records}}
+      </div>
+    </div>
+
+    </div>   
+   </div>
+  </div>
+</div>
+{{/viewtypeCard}}
+{{/response}}

@@ -1,0 +1,26 @@
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>User Name</th>
+      <th>User ID</th>
+      <th>Assignment Name</th>  
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#assigndata}}
+    <tr>
+
+      <td>{{user_name}}</td>
+      <td>{{user_id}}</td>
+      <td>{{assign_name}}</td>
+      <td>{{submitted_date}}</td>
+      <td>{{final_grade}}</td>
+
+    </tr>
+   {{/assigndata}}
+  </tbody>
+</table>
