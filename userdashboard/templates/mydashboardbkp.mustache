@@ -1,0 +1,300 @@
+<div class="tab-pane fade active show" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+  <div class="dashboard-box">
+      <!-- <div class="position-relative">
+        <input type="text" class="form-control search-bar" placeholder="Try Search for Courses ">
+        <i class="bi bi-search search-icon"></i>
+      </div> -->
+
+      <div class="row justify-content-center">
+
+        <!--       <div class="col-md-4">
+          <div class="card" style="background-color: #8a63d2;">
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="background-color: #F1BFF3;">
+             <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card" style="background-color: #daeb94;">
+             <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+          </div>
+        </div> -->
+
+        <div class="col-md-4">
+          <div class="card" style="background-color:#fbafcfd1;">
+              <div class="my-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div> 
+              <div class="card-header">Courses</div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{coursepercentage}}%" aria-valuenow="{{coursepercentage}}" aria-valuemin="0" aria-valuemax="100">{{coursepercentage}}</div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <div class="progressdata blue">
+                      <span class="progress-left">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">{{coursepercentage}}%</div>
+                  </div>
+              </div>
+
+
+              <h4>
+                Total: {{totalcourses}}
+              </h4>
+              <h4>
+                Inprogress: {{inprogresscount}}
+              </h4>
+              <h4>
+                Completed: {{completedcount}}
+              </h4>
+              
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="background-color: #D3BBF5;">
+
+              <div class="my-icon">
+                  <i class="fas fa-tasks"></i>
+              </div>
+             
+              <div class="card-header">Assesments</div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{assespercentage}}%" aria-valuenow="{{assespercentage}}" aria-valuemin="0" aria-valuemax="100">{{assespercentage}}</div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <div class="progressdata yellow">
+                      <span class="progress-left">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">{{assespercentage}}%</div>
+                  </div>
+              </div>
+
+              <h4>
+               Total:  {{totalassesments}}
+              </h4>
+              <h4>
+                Inprogress: {{inprogressasscount}}
+              </h4>
+              <h4>
+                Completed: {{completedasscount}}
+              </h4>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="background-color: #A4F5FC;">
+
+              <div class="my-icon">
+                  <i class="fas fa-question-circle"></i>
+              </div>
+           
+              <div class="card-header">Exams</div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{exampercentage}}%" aria-valuenow="{{exampercentage}}" aria-valuemin="0" aria-valuemax="100">{{exampercentage}}</div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <div class="progressdata blue">
+                      <span class="progress-left">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">{{exampercentage}}%</div>
+                  </div>
+              </div>
+
+              <h4>
+                Total:  {{totalexams}}
+              </h4>
+              <h4>
+                Inprogress: {{inprogressexamscount}}
+              </h4>
+              <h4>
+                Completed: {{completedexamscount}}
+              </h4>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>
+<style>
+
+  .progressdata{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.progressdata:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progressdata > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progressdata .progress-left{
+    left: 0;
+}
+.progressdata .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.progressdata .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progressdata .progress-right{
+    right: 0;
+}
+.progressdata .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.progressdata .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #44484b;
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progressdata.blue .progress-bar{
+    border-color: #049dff;
+}
+.progressdata.blue .progress-left .progress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progressdata.yellow .progress-bar{
+    border-color: #fdba04;
+}
+.progressdata.yellow .progress-left .progress-bar{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+.progressdata.pink .progress-bar{
+    border-color: #ed687c;
+}
+.progressdata.pink .progress-left .progress-bar{
+    animation: loading-4 0.4s linear forwards 1.8s;
+}
+.progressdata.green .progress-bar{
+    border-color: #1abc9c;
+}
+.progressdata.green .progress-left .progress-bar{
+    animation: loading-5 1.2s linear forwards 1.8s;
+}
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+@keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+@media only screen and (max-width: 990px){
+    .progressdata{ margin-bottom: 20px; }
+}
+
+</style>

@@ -1,0 +1,86 @@
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <div class="row">
+      <nav class="col-lg-2 col-md-3 text-white sidebar d-flex flex-column" >
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-mydashboard-tab" data-bs-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true" style="font-size: 13px;border-left: 5px solid red;">
+            <i class="bi bi-speedometer2"></i>  Dashboard
+          </a>
+          <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" style="font-size: 13px;border-left: 5px solid orange;">
+            <i class="bi bi-person"></i>  Profile
+          </a>
+          <a class="nav-link" id="v-pills-courses-tab" data-bs-toggle="pill" href="#v-pills-courses" role="tab" aria-controls="v-pills-courses" aria-selected="false" style="font-size: 13px;border-left: 5px solid green;">
+            <i class="bi bi-book"></i>  Courses
+          </a>
+          <a class="nav-link" id="v-pills-assesments-tab" data-bs-toggle="pill" href="#v-pills-assignments" role="tab" aria-controls="v-pills-assignments" aria-selected="false" style="font-size: 13px;border-left: 5px solid purple;">
+            <i class="bi bi-journal-bookmark"></i>  Assesments
+          </a>
+          <a class="nav-link" id="v-pills-exams-tab" data-bs-toggle="pill" href="#v-pills-quizzes" role="tab" aria-controls="v-pills-quizzes" aria-selected="false" style="font-size: 13px;border-left: 5px solid #b7b931;">
+            <i class="bi bi-card-checklist"></i>  Quizzes
+          </a>
+          <a class="nav-link" id="v-pills-forums-tab" data-bs-toggle="pill" href="#v-pills-forums" role="tab" aria-controls="v-pills-forums" aria-selected="false" style="font-size: 13px;border-left: 5px solid teal;">
+            <i class="bi bi-card-checklist"></i>  Discussions
+          </a>
+          <a class="nav-link" id="v-pills-reports-tab" data-bs-toggle="pill" href="#v-pills-reports" role="tab" aria-controls="v-pills-reports" aria-selected="false" style="font-size: 13px;border-left: 5px solid magenta;">
+            <i class="bi bi-file-earmark-bar-graph"></i>  Reports
+          </a>
+        </div>
+      </nav>
+
+
+      <div class="col-lg-10 col-md-9 bg-light">
+          <input type="hidden" id="studentidvalue" name="studentid" value="{{userid}}">
+
+          <div class="tab-content" id="v-pills-tabContentcommon">
+                
+          </div>
+
+          <div class="tab-content" id="v-courses-tabContent">
+                <div class="d-flex justify-content-end mb-3">
+                    <input type="text" class="form-control w-25" id="coursesearch" style="display: none;" placeholder="Search..." aria-label="Search"  onkeyup="(function(e){ require('block_userdashboard/userdashboard').coursesearch({selector:'seacrhcourse',contextid:1 }) })(event)">
+                </div>
+            <div class="d-inline-blocks card-paginate_wrap w-100 pull-left" id="manage_userdashboard_courses" data-region="manage_userdashboard_courses-preview-container">
+              <div data-region="manage_userdashboard_courses-count-container"></div>
+              <div data-region="manage_userdashboard_courses-list-container" id ="manage_userdashboard_coursesid"></div>
+            </div>
+          </div>
+
+
+            <div class="tab-content" id="v-assesments-tabContent">
+                <div class="d-flex justify-content-end mb-3">
+                    <input type="text" class="form-control w-25" id="assesmentsearch" style="display: none;" placeholder="Search..." aria-label="Search"  onkeyup="(function(e){ require('block_userdashboard/userdashboard').assesmentsearch({selector:'seacrhassesment',contextid:1 }) })(event)">
+                </div>
+                <div class="d-inline-blocks card-paginate_wrap w-100 pull-left" id="manage_userdashboard_assign" data-region="manage_userdashboard_assign-preview-container">
+                  <div data-region="manage_userdashboard_assign-count-container"></div>
+                  <div data-region="manage_userdashboard_assign-list-container" id ="manage_userdashboard_assignid"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="v-exams-tabContent">
+                <div class="d-flex justify-content-end mb-3">
+                    <input type="text" class="form-control w-25" id="examsearch" style="display: none;" placeholder="Search..." aria-label="Search"  onkeyup="(function(e){ require('block_userdashboard/userdashboard').examsearch({selector:'seacrhexam',contextid:1 }) })(event)">
+                </div>
+                <div class="d-inline-blocks card-paginate_wrap w-100 pull-left" id="manage_userdashboard_exam" data-region="manage_userdashboard_exam-preview-container">
+                    <div data-region="manage_userdashboard_exam-count-container"></div>
+                    <div data-region="manage_userdashboard_exam-list-container" id ="manage_userdashboard_examid"></div>
+                </div>
+            </div>
+
+
+            <div class="tab-content" id="v-forums-tabContent">
+
+                <div class="d-flex justify-content-end mb-3">
+                    <input type="text" class="form-control w-25" id="forumsearch" style="display: none;" placeholder="Search..." aria-label="Search"  onkeyup="(function(e){ require('block_userdashboard/userdashboard').forumsearch({selector:'seacrhforum',contextid:1 }) })(event)">
+                </div>
+
+                <div class="d-inline-blocks card-paginate_wrap w-100 pull-left" id="manage_userdashboard_forum" data-region="manage_userdashboard_forum-preview-container">
+                  <div data-region="manage_userdashboard_forum-count-container"></div>
+                  <div data-region="manage_userdashboard_forum-list-container" id ="manage_userdashboard_forumid"></div>
+                </div>
+            </div>
+
+          </div>
+      </div>
+</div>

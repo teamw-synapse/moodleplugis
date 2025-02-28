@@ -1,0 +1,554 @@
+.block_userdashboard .dashboard-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .block_userdashboard .card {
+        min-height: 150px;
+    }
+  
+
+       .block_userdashboard .search-bar {
+      width: 60%;
+      padding: 10px 40px 12px 20px; /* Added padding for the icon */
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ced4da;
+      right:30px; /* Added border for better visibility */
+    }
+  
+
+    /* Additional styles for the search icon */
+    .block_userdashboard .search-icon {
+      position: absolute;
+        top: 50%;
+        left: 52%;
+      transform: translateY(-50%);
+      color: #6c757d;
+    }
+ 
+
+    .block_userdashboard .nav-link {
+      color: #343a40;
+      border-radius: 10px;
+      margin-bottom: 5px;
+      transition: all 0.3s ease;
+    }
+    .block_userdashboard .nav-link:hover {
+      background-color: #8a63d2;
+      color: white;
+    }
+
+    .block_userdashboard .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+      background-color: #8a63d2;
+      color: white;
+    }
+    .block_userdashboard .nav-pills .nav-link.active::before, .nav-pills .show > .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #343a40;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .block_userdashboard .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .block_userdashboard .logo img {
+      width: 80px; /* Adjust the width as needed */
+    }
+
+     .block_userdashboard :root {
+      --progress-bar-width: 59px;
+    --progress-bar-height: 54px;
+    --font-size: 1rem;
+    --progress-value: 57; /* Set progress value here */
+    }
+
+    .block_userdashboard .circular-progress {
+      width: var(--progress-bar-width);
+      height: var(--progress-bar-height);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: conic-gradient(#e10808 calc(var(--progress-value) * 3.6deg), lightgrey 0deg);
+    }
+
+    .block_userdashboard .inner-circle {
+      position: absolute;
+      width: calc(var(--progress-bar-width) - 30px);
+      height: calc(var(--progress-bar-height) - 30px);
+      border-radius: 50%;
+      background-color: lightgrey;
+    }
+
+    .block_userdashboard .percentage {
+      position: relative;
+      font-size: var(--font-size);
+      color: rgb(0, 0, 0, 0.8);
+          top: 8px;
+    }
+
+    /* Additional styles for the card */
+    .block_userdashboard .card {
+    margin: 6px auto;
+    padding: 10px;
+    border: 1px solid #8bd9d9;
+    border-radius: 10px;
+    max-width: 351px;
+    position: relative;
+    }
+
+    .block_userdashboard .card-content {
+      text-align: center;
+      color: white;
+    }
+
+    .block_userdashboard .icon {
+          font-size:  24px;
+        margin-bottom: -55px;
+
+    }
+    .block_userdashboard .my-icon {
+          font-size: 24px;
+        margin-bottom: -46px;
+      }
+    .block_userdashboard .card-header {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-left:  21px;
+    background-color: transparent;
+    }
+    .block_userdashboard .assignments-text {
+    text-align: center;
+    margin-top: -38px;
+    margin-left: 43px;
+    font-size: -27px;
+
+    }
+
+    .block_userdashboard .text-muted {
+      color: #666;
+    }
+
+     .block_userdashboard .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .block_userdashboard .profile1-header {
+      background-color: #8a63d2 ;
+      color: #fff;
+      padding: 35px;
+      text-align: center;
+    }
+    .block_userdashboard .profile1-header h1 {
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .profile1-details {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: -50px;
+    }
+    .block_userdashboard .profile1-details img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .block_userdashboard .course-progress {
+    margin-top: 1px;
+    text-align: center;
+      font-weight: bold;
+    }
+    .block_userdashboard .course-progress h2 {
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .progress {
+      height: 30px;
+      border-radius: 5px;
+    }
+    .block_userdashboard .assignments {
+      margin-top: 20px;
+    }
+    .block_userdashboard .assignments h2 {
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .assignment-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .certificates {
+      margin-top: 20px;
+    }
+    .block_userdashboard .certificates h2 {
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .certificate-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .activity {
+      margin-top: 20px;
+    }
+    .block_userdashboard .activity h2 {
+      margin-bottom: 10px;
+    }
+    .block_userdashboard .activity-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .block_userdashboard .course-container {
+    max-width: 1140px;
+    margin: 3px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+   .block_userdashboard .course-container .col-md-4 {
+        flex: 0 0 auto;
+        width: 30.33333333%;
+        margin-left: 20px;
+    }
+    .block_userdashboard #v-pills-reports .col-md-4 {
+        float:left;
+        width: 33.33333333%;
+    }
+  .block_userdashboard .course-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .block_userdashboard .course-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .block_userdashboard .course-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 0.3s ease;
+  }
+
+
+  .block_userdashboard .course-card:hover .course-img {
+    transform: scale(1.1);
+  }
+
+  .block_userdashboard .course-details {
+   padding: 3px;
+  }
+
+  .block_userdashboard .course-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .block_userdashboard .card-text {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+
+  }
+
+  .block_userdashboard .progress {
+    height: 10px;
+    margin-bottom: 10px;
+      background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow: hidden;
+  }
+
+  .block_userdashboard .progress-bar {
+    height: 100%;
+    background-color: #6c5ce7;
+    
+  }
+  .block_userdashboard .completion-days-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .block_userdashboard .completion,
+  .block_userdashboard .days {
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+      .block_userdashboard .coursetab-container {
+    max-width: 1040px;
+    margin: 3px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+   .block_userdashboard .coursetab-content {
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+      }
+     
+      .block_userdashboard .coursetab-content.active {
+        display: block;
+      }
+      .block_userdashboard .coursetab {
+        cursor: pointer;
+      }
+      .block_userdashboard .coursetab.active {
+        font-weight: bold;
+        color: blue;
+      }
+      /* Styles for cards */
+      .block_userdashboard .tcourse-slider {
+        overflow: hidden;
+        transition: transform 0.5s ease;
+      }
+      .block_userdashboard .tcourse-slides {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .block_userdashboard .tcourse-card {
+        flex: 0 0 auto;
+        margin-right: 0px;
+        padding: 1px;
+      margin: 7px auto;
+      padding: 10px;
+      border: 1px solid #8bd9d9;
+      border-radius: 10px;
+/*      max-width: 183px;*/
+      position: relative;/* Adjust margin between cards */
+      }
+      .block_userdashboard .card-body{
+        padding: 0px;
+      margin-bottom: -4px;
+
+      }
+      /* Styles for slider buttons */
+      .block_userdashboard .slider-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      /* Custom styles for course cards */
+      
+   .block_userdashboard .custom-div {
+          background-color: #dac8e5;
+      padding: -19px;
+      margin: 7px;
+      border-radius: 11px;
+      box-shadow: 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .block_userdashboard .chart-container {
+        width: 200px;
+        height: 150px;
+        margin: 20px;
+        float: left;
+      }
+      /* Custom styles for tables */
+      .block_userdashboard .table-container {
+        margin-top: 20px;
+      }
+
+      .block_userdashboard .tcourse-slides .row {
+   bs-gutter-x: 1.5rem;    
+   bs-gutter-y: 0;   
+   display: flex;   
+   flex-wrap: nowrap; 
+   margin-top: calc(-1* var(--bs-gutter-y)); 
+   margin-right: calc(-.5* var(--bs-gutter-x));   
+   margin-left: calc(-.5* var(--bs-gutter-x)); 
+   justify-content: space-around;
+}
+.block_userdashboard .progressdata{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.block_userdashboard .progressdata:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.block_userdashboard .progressdata > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.block_userdashboard .progressdata .progress-left{
+    left: 0;
+}
+.block_userdashboard .progressdata .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.block_userdashboard .progressdata .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.block_userdashboard .progressdata .progress-right{
+    right: 0;
+}
+.block_userdashboard .progressdata .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.block_userdashboard .progressdata .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #44484b;
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.block_userdashboard .progressdata.blue .progress-bar{
+    border-color: #049dff;
+}
+.block_userdashboard .progressdata.blue .progress-left .progress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
+}
+.block_userdashboard .progressdata.yellow .progress-bar{
+    border-color: #fdba04;
+}
+.block_userdashboard .progressdata.yellow .progress-left .progress-bar{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+.block_userdashboard .progressdata.pink .progress-bar{
+    border-color: #ed687c;
+}
+.block_userdashboard .progressdata.pink .progress-left .progress-bar{
+    animation: loading-4 0.4s linear forwards 1.8s;
+}
+.block_userdashboard .progressdata.green .progress-bar{
+    border-color: #1abc9c;
+}
+.block_userdashboard .progressdata.green .progress-left .progress-bar{
+    animation: loading-5 1.2s linear forwards 1.8s;
+}
+.block_userdashboard @keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+.block_userdashboard @keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+.block_userdashboard @keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+.block_userdashboard @keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+.block_userdashboard @keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+.block_userdashboard @media only screen and (max-width: 990px){
+    .progressdata{ margin-bottom: 20px; }
+}
+
+.block_userdashboard .card-text-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px; /* Adjust gap as needed */
+}
+

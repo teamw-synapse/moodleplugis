@@ -1,0 +1,35 @@
+<div class="tab-pane fade active show p-3" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+<div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card border-success mb-3 shadow-lg">
+    <div class="card-body">
+  <!-- Profile Picture -->
+  <div class="row">
+    <div class="col-md-4 d-flex flex-column align-items-center">
+      <div class="rounded-circle border border-info border-5 mb-3" 
+           style="width: 150px; height: 150px; background-image: url('{{profile}}'); background-size: cover; background-position: center;"></div>
+      <div class="badge bg-warning text-dark p-2">{{name}}</div>
+    </div>
+
+    <!-- Student Details -->
+    <div class="col-md-8">
+      <div class="d-flex justify-content-between align-items-start mb-3">
+        <h4 class="card-title text-success">Student Details</h4>
+        
+      </div>
+      <p><strong>University:</strong> VIT University <span class="ml-4"><strong>Email:</strong> {{email}}</span></p>
+      <p><strong>Full Name:</strong> {{name}} <span class="ml-4"><strong>Student ID:</strong> {{studentid}}</span></p>
+      <p><strong>First login to site:</strong> {{firstaccess}}</p>
+      <p><strong>Last login to site:</strong> {{lastaccess}}</p>
+    </div>
+  </div>
+</div>
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

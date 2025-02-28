@@ -1,0 +1,131 @@
+<div class="tab-pane fade show active p-3" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                 <div class="row">
+            <!-- Card 1: Courses -->
+            <div class="col">
+              <div class="card text-center h-100" style="background: linear-gradient(to bottom, #176ae7, #36362f); color: #ffffff; border: none;">
+                <div class="card-body d-flex flex-column align-items-center text-left">
+                  <i class="fas fa-book-open fa-2x mb-3"><h4> Courses</h4></i>
+                  <div class="w-100 mb-3">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {{coursepercentage}}%;" aria-valuenow="{{coursepercentage}}" aria-valuemin="0" aria-valuemax="100">{{coursepercentage}}</div>
+                    </div>
+                  </div>
+                  <div class="position-relative d-flex justify-content-center align-items-center mb-2 progress-circle" style="width: 100px; height: 100px;">
+                    <svg width="100" height="100">
+                      <circle cx="50" cy="50" r="45" stroke="#e6e6e6" stroke-width="10" fill="none"></circle>
+                      <circle class="progress-bar-circle" cx="50" cy="50" r="45" stroke="#fdba04" stroke-width="10" fill="none" stroke-dasharray="282" stroke-dashoffset="282"></circle>
+                    </svg>
+                    <div class="progress-value position-absolute" style="line-height: 100px; font-size: 20px; font-weight: bold;">{{coursepercentage}}%</div>
+                  </div>
+                </div>
+                <strong>
+                  <p class="card-text">Total : {{totalcourses}}</p>
+                  <p class="card-text">Incomplete : {{inprogresscount}}</p>
+                  <p class="card-text">Completed : {{completedcount}}</p>
+                </strong>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-center h-100" style="background: linear-gradient(to bottom, #2ecc71, #36362f); color: #ffffff; border: none;">
+                <div class="card-body d-flex flex-column align-items-center text-left">
+                  <i class="fas fa-graduation-cap fa-2x mb-3"><h4>Assignments</h4></i>
+                  <div class="w-100 mb-3">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: {{assespercentage}}%;" aria-valuenow="{{assespercentage}}" aria-valuemin="0" aria-valuemax="100">{{assespercentage}}</div>
+                    </div>
+                  </div>
+                  <div class="position-relative d-flex justify-content-center align-items-center mb-2 progress-circle" style="width: 100px; height: 100px;">
+                    <svg width="100" height="100">
+                      <circle cx="50" cy="50" r="45" stroke="#e6e6e6" stroke-width="10" fill="none"></circle>
+                      <circle class="progress-bar-circle" cx="50" cy="50" r="45" stroke="#049dff" stroke-width="10" fill="none" stroke-dasharray="282" stroke-dashoffset="282"></circle>
+                    </svg>
+                    <div class="progress-value position-absolute" style="line-height: 100px; font-size: 20px; font-weight: bold;">{{assespercentage}}%</div>
+                  </div>
+                </div>
+                <strong>
+                  <p class="card-text">Total : {{totalassesments}}</p>
+                  <p class="card-text">Incomplete : {{inprogressasscount}}</p>
+                  <p class="card-text">Completed : {{completedasscount}}</p>
+                </strong>
+              </div>
+            </div>
+
+            <!-- Card 3: Exams -->
+            <div class="col">
+              <div class="card text-center h-100" style="background: linear-gradient(to bottom, #e74c3c, #36362f); color: #ffffff; border: none;">
+                <div class="card-body d-flex flex-column align-items-center text-left">
+                  <i class="fas fa-users fa-2x mb-3"><h4>Quizzes</h4></i>
+                  <div class="w-100 mb-3">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{exampercentage}}%;" aria-valuenow="{{exampercentage}}" aria-valuemin="0" aria-valuemax="100">{{exampercentage}}</div>
+                    </div>
+                  </div>
+                  <div class="position-relative d-flex justify-content-center align-items-center mb-2 progress-circle" style="width: 100px; height: 100px;">
+                    <svg width="100" height="100">
+                      <circle cx="50" cy="50" r="45" stroke="#e6e6e6" stroke-width="10" fill="none"></circle>
+                      <circle class="progress-bar-circle" cx="50" cy="50" r="45" stroke="#1abc9c" stroke-width="10" fill="none" stroke-dasharray="282" stroke-dashoffset="282"></circle>
+                    </svg>
+                    <div class="progress-value position-absolute" style="line-height: 100px; font-size: 20px; font-weight: bold;">{{exampercentage}}%</div>
+                  </div>
+                </div>
+                <strong>
+                  <p class="card-text">Total : {{totalexams}}</p>
+                  <p class="card-text">Incomplete : {{inprogressexamscount}}</p>
+                  <p class="card-text">Completed : {{completedexamscount}}</p>
+                </strong>
+              </div>
+            </div>
+
+
+            <!-- Card 4: Forums -->
+            <div class="col">
+              <div class="card text-center h-100" style="background: linear-gradient(to bottom, #277891, #36362f); color: #ffffff; border: none;">
+                <div class="card-body d-flex flex-column align-items-center text-left">
+                  <i class="fas fa-users fa-2x mb-3"><h4>Discussions</h4></i>
+                  <div class="w-100 mb-3">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: {{forumpercentage}}%;" aria-valuenow="{{forumpercentage}}" aria-valuemin="0" aria-valuemax="100">{{forumpercentage}}</div>
+                    </div>
+                  </div>
+                  <div class="position-relative d-flex justify-content-center align-items-center mb-2 progress-circle" style="width: 100px; height: 100px;">
+                    <svg width="100" height="100">
+                      <circle cx="50" cy="50" r="45" stroke="#e6e6e6" stroke-width="10" fill="none"></circle>
+                      <circle class="progress-bar-circle" cx="50" cy="50" r="45" stroke="#ca3120" stroke-width="10" fill="none" stroke-dasharray="282" stroke-dashoffset="282"></circle>
+                    </svg>
+                    <div class="progress-value position-absolute" style="line-height: 100px; font-size: 20px; font-weight: bold;">{{forumpercentage}}%</div>
+                  </div>
+                </div>
+                <strong>
+                  <p class="card-text">Total : {{totalforums}}</p>
+                  <p class="card-text">Incomplete : {{inprogressforumcount}}</p>
+                  <p class="card-text">Completed : {{completedforums}}</p>
+                </strong>
+              </div>
+            </div>
+          </div>
+ </div>
+<script>
+    function updateProgressBar(progressContainer, percentage) {
+      const progressCircle = progressContainer.querySelector(".progress-bar-circle");
+      const progressValue = progressContainer.querySelector(".progress-value");
+      const radius = progressCircle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+      progressCircle.style.strokeDashoffset = `${circumference}`;
+
+      const offset = circumference - (percentage / 100) * circumference;
+      progressCircle.style.strokeDashoffset = offset;
+
+      progressValue.textContent = `${percentage}%`;
+    }
+
+   
+      // Update each progress circle with respective percentages
+      var progressCircles = document.querySelectorAll(".progress-circle");
+      updateProgressBar(progressCircles[0], {{coursepercentage}}); // Courses: 30%
+      updateProgressBar(progressCircles[1], {{assespercentage}}); // Assignments: 45%
+      updateProgressBar(progressCircles[2], {{exampercentage}}); // Exams: 60%
+      updateProgressBar(progressCircles[3], {{forumpercentage}}); // Exams: 60%
+    
+  </script>

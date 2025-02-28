@@ -1,0 +1,53 @@
+{{#response}}
+{{#viewtypeCard}}
+<div class="tab-pane fade active show" id="v-pills-courses" role="tabpanel" aria-labelledby="v-pills-courses-tab">
+<div class="card-text content mt-3">
+
+  <div class="card-grid mx-0 row row-cols-1 row-cols-sm-2 row-cols-md-3 " data-region="card-deck" role="list">
+    {{#records}}
+    <div class="col d-flex px-0 mb-2" >
+        <div class="card dashboard-card" role="listitem" data-region="course-content" data-course-id="{{courseid}}" >
+            <a tabindex="-1" >
+                <div class="card-img dashboard-card-img" style="background-image: url('{{coursepic}}');">
+                    <div class="course-category">{{categoryname}}</div>
+                    {{#imgurlflag}}
+                    <div class="course-name-right text-white"> {{coursename}}</div>
+                    {{/imgurlflag}}
+                    <!-- <span class="sr-only">{{coursename}}</span> -->
+                </div>
+            </a>
+            <div class="card-body pr-1 course-info-container" id="course-info-container-{{courseid}}-14">
+                <div class="d-flex align-items-start">
+                    <div class="w-100">
+                        <a href="{{courseurl}}" class="aalink coursename mr-2 mb-1">
+                            <span id="favorite-icon-{{courseid}}-14" data-region="favourite-icon" data-course-id="{{courseid}}">
+                                <span class="text-primary hidden" data-region="is-favourite" aria-hidden="true">
+                                    <i class="icon fa fa-star fa-fw " title="Starred course" role="img" aria-label="Starred course"></i>
+                                    <span class="sr-only">Course is starred</span>
+                                </span>
+                            </span>
+                    <span class="sr-only"> Course name </span>
+                <span class="multiline">
+                    {{coursename}}
+                </span>
+              </a>
+              <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 
+              {{progress}}%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="completion-days-container" style="color:black;">
+                  <p class="completion">Completed: {{progress}}%</p>
+                  <p class="days">Days: {{currentdays}}/{{totaldays}}</p>
+              </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  {{/records}}
+ </div>            
+</div>
+</div>
+
+{{/viewtypeCard}}
+{{/response}}

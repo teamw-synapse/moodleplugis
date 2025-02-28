@@ -1,0 +1,22 @@
+{{#response}}
+{{#viewtypeCard}}
+<div class="tab-pane fade active show" id="v-pills-exams" role="tabpanel" aria-labelledby="v-pills-exams-tab">
+  <div class="container">
+    <div class="row">
+      {{#records}}
+      <div class="col-md-6">
+          <div class="card mb-4" style="border-radius: 3em / 6em; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); border-right: 10px solid #e74c3c; border-left: 10px solid #e74c3c; background: linear-gradient(135deg, #f0f4f7, #cfd8dc);">
+                <div class="card-body">
+                  <p><a href="{{courseurl}}">{{coursename}}</a></p>
+                      <p><a href="{{examurl}}">{{examname}}</a></p>
+                      <p><strong>Grade:</strong> {{grade}}<span class="ml-4"><strong>Status:</strong> {{status}}</span></p>
+                      <p><strong>Start date:</strong> {{startdate}}<span class="ml-4"><strong>Enddate:</strong> {{enddate}}</span></p>
+                </div>
+              </div>
+     </div>
+    {{/records}}
+    </div>
+    </div>
+ </div>
+{{/viewtypeCard}}
+{{/response}}

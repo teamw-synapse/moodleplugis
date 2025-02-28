@@ -1,0 +1,312 @@
+<div class="tab-pane fade active show" id="v-pills-reports" role="tabpanel" aria-labelledby="v-pills-reports-tab">
+        
+            <div class="col-md-4">
+              <!-- Select Chart Type -->
+              <h5>Courses Data</h5>
+              <div class="form-group">
+                <label for="chart-select1">Select Chart Type:</label>
+                <select class="form-control" id="chart-select1">
+                  <option value="pie">Pie Chart</option>
+                  <option value="bar">Bar Chart</option>
+                </select>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="chart-container" id="pie-chart-container1">
+                <canvas id="pie-chart1"></canvas>
+              </div>
+
+              <!-- Bar Chart -->
+              <div class="chart-container" id="bar-chart-container1">
+                <canvas id="bar-chart1"></canvas>
+              </div>
+
+              <!-- Table -->
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#records}}
+                    <tr>
+                      <td>{{coursename}}</td>
+                      <td>{{grade}}</td>
+                    </tr>
+                  {{/records}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+            <h5>Assesments Data</h5>
+              <!-- Select Chart Type -->
+              <div class="form-group">
+                <label for="chart-select2">Select Chart Type:</label>
+                <select class="form-control" id="chart-select2">
+                  <option value="pie">Pie Chart</option>
+                  <option value="bar">Bar Chart</option>
+                </select>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="chart-container" id="pie-chart-container2">
+                <canvas id="pie-chart2"></canvas>
+              </div>
+
+              <!-- Bar Chart -->
+              <div class="chart-container" id="bar-chart-container2">
+                <canvas id="bar-chart2"></canvas>
+              </div>
+
+              <!-- Table -->
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Assesments</th>
+                      <th>Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#assesments}}
+                    <tr>
+                      <td>{{assesmentname}}</td>
+                      <td>{{grade}}</td>
+                    </tr>
+                  {{/assesments}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+        
+            <div class="col-md-4">
+              <!-- Select Chart Type -->
+              <h5>Exams Data</h5>
+              <div class="form-group">
+                <label for="chart-select3">Select Chart Type:</label>
+                <select class="form-control" id="chart-select3">
+                  <option value="pie">Pie Chart</option>
+                  <option value="bar">Bar Chart</option>
+                </select>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="chart-container" id="pie-chart-container3">
+                <canvas id="pie-chart3"></canvas>
+              </div>
+
+              <!-- Bar Chart -->
+              <div class="chart-container" id="bar-chart-container3">
+                <canvas id="bar-chart3"></canvas>
+              </div>
+
+              <!-- Table -->
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Exams</th>
+                      <th>Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#exams}}
+                    <tr>
+                      <td>{{examname}}</td>
+                      <td>{{grade}}</td>
+                    </tr>
+                  {{/exams}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+
+        
+</div>
+
+<script>
+var labeslsdata = [];
+var contentdata = [];
+
+var asslabeslsdata = [];
+var asscontentdata = [];
+
+var examlabeslsdata = [];
+var examcontentdata = [];
+
+{{#records}}
+labeslsdata.push("{{coursename}}");
+contentdata.push("{{grade}}");
+{{/records}}
+
+{{#assesments}}
+asslabeslsdata.push("{{assesmentname}}");
+asscontentdata.push("{{grade}}");
+{{/assesments}}
+
+{{#exams}}
+examlabeslsdata.push("{{examname}}");
+examcontentdata.push("{{grade}}");
+{{/exams}}
+
+
+
+  // Function to show/hide charts based on selected option
+  document.getElementById('chart-select1').addEventListener('change', function() {
+    var selectedChart = this.value;
+    if (selectedChart === 'pie') {
+      document.getElementById('pie-chart-container1').style.display = 'block';
+      document.getElementById('bar-chart-container1').style.display = 'none';
+    } else if (selectedChart === 'bar') {
+      document.getElementById('pie-chart-container1').style.display = 'none';
+      document.getElementById('bar-chart-container1').style.display = 'block';
+    }
+  });
+
+  // Pie Chart
+  var pieChartCtx = document.getElementById('pie-chart1').getContext('2d');
+  var pieChart = new Chart(pieChartCtx, {
+    type: 'pie',
+    data: {
+      labels: labeslsdata,
+      datasets: [{
+        data: contentdata,
+        backgroundColor: ['#FF6384', '#36A2EB']
+      }]
+    }
+  });
+
+  // Bar Chart
+  var barChartCtx = document.getElementById('bar-chart1').getContext('2d');
+  var barChart = new Chart(barChartCtx, {
+    type: 'bar',
+    data: {
+      labels: labeslsdata,
+      datasets: [{
+        label: 'Data',
+        data: contentdata,
+        backgroundColor: ['#FF6384', '#36A2EB']
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+
+
+
+  // Function to show/hide charts based on selected option
+  document.getElementById('chart-select2').addEventListener('change', function() {
+    var selectedChart = this.value;
+    if (selectedChart === 'pie') {
+      document.getElementById('pie-chart-container2').style.display = 'block';
+      document.getElementById('bar-chart-container2').style.display = 'none';
+    } else if (selectedChart === 'bar') {
+      document.getElementById('pie-chart-container2').style.display = 'none';
+      document.getElementById('bar-chart-container2').style.display = 'block';
+    }
+  });
+
+  // Pie Chart
+  var pieChartCtx = document.getElementById('pie-chart2').getContext('2d');
+  var pieChart = new Chart(pieChartCtx, {
+    type: 'pie',
+    data: {
+      labels: asslabeslsdata,
+      datasets: [{
+        data: asscontentdata,
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    }
+  });
+
+  // Bar Chart
+  var barChartCtx = document.getElementById('bar-chart2').getContext('2d');
+  var barChart = new Chart(barChartCtx, {
+    type: 'bar',
+    data: {
+      labels: asslabeslsdata,
+      datasets: [{
+        label: 'Data',
+        data: asscontentdata,
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+
+
+   // Function to show/hide charts based on selected option
+  document.getElementById('chart-select3').addEventListener('change', function() {
+    var selectedChart = this.value;
+    if (selectedChart === 'pie') {
+      document.getElementById('pie-chart-container3').style.display = 'block';
+      document.getElementById('bar-chart-container3').style.display = 'none';
+    } else if (selectedChart === 'bar') {
+      document.getElementById('pie-chart-container3').style.display = 'none';
+      document.getElementById('bar-chart-container3').style.display = 'block';
+    }
+  });
+
+  // Pie Chart
+  var pieChartCtx = document.getElementById('pie-chart3').getContext('2d');
+  var pieChart = new Chart(pieChartCtx, {
+    type: 'pie',
+    data: {
+      labels: examlabeslsdata,
+      datasets: [{
+        data: examcontentdata,
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    }
+  });
+
+  // Bar Chart
+  var barChartCtx = document.getElementById('bar-chart3').getContext('2d');
+  var barChart = new Chart(barChartCtx, {
+    type: 'bar',
+    data: {
+      labels: examlabeslsdata,
+      datasets: [{
+        label: 'Data',
+        data: examcontentdata,
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+</script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
