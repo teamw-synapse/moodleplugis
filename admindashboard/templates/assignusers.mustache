@@ -1,0 +1,30 @@
+{{#response}}
+    {{#viewtypeCard}}
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Student Name</th>
+      <th>Student ID</th>
+      <th>Assignment Name</th>  
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#records}}
+    <tr>
+
+      <td><a href="{{url}}" style= "color: darkturquoise; cursor: pointer;text-decoration: underline;" target="_blank">{{user_name}}</a></td>
+      <td>{{user_id}}</td>
+      <td>{{assign_name}}</td>
+      <td>{{submitted_date}}</td>
+      <td>{{final_grade}}</td>
+
+    </tr>
+   {{/records}}
+  </tbody>
+</table>
+ {{/viewtypeCard}}
+{{/response}}

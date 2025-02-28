@@ -1,0 +1,67 @@
+{{#response}}
+{{#viewtypeCard}}
+<link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+<div class="card-text content mt-3">
+  <div class="card-grid mx-0 row row-cols-1 row-cols-sm-2 row-cols-md-2 " data-region="card-deck" role="list">
+    {{#records}}
+    <div class="col d-flex px-0 mb-2" >
+        <div class="card dashboard-card" role="listitem" data-region="course-content" data-course-id="{{courseid}}" >
+            <a href="{{url}}" tabindex="-1" >
+                <div class="card-img dashboard-card-img" style="background-repeat: no-repeat;background-image: url('{{coursepic}}');">
+                    <div class="course-category">{{catname}}</div>
+                    {{#imgurlflag}}
+                    <div class="course-name-right text-white"> {{my_coursesfull}}</div>
+                    {{/imgurlflag}}
+                    <span class="sr-only">{{my_coursesfull}}</span>
+                </div>
+            </a>
+            <div class="card-body pr-1 course-info-container" id="course-info-container-{{courseid}}-14">
+                <div class="d-flex align-items-start">
+                    <div class="w-100">
+                        <a href="{{url}}" class="aalink coursename mr-2 mb-1">
+                            <span id="favorite-icon-{{courseid}}-14" data-region="favourite-icon" data-course-id="{{courseid}}">
+                                <span class="text-primary hidden" data-region="is-favourite" aria-hidden="true">
+                                    <i class="icon fa fa-star fa-fw " title="Starred course" role="img" aria-label="Starred course"></i>
+                                    <span class="sr-only">Course is starred</span>
+                                </span>
+                            </span>
+                    <span class="sr-only"> Course name </span>
+                <span class="multiline">
+                    {{my_coursesfull}}
+                </span>
+              </a>
+            <div class="card-body pr-1 course-info-container" id="course-info-container-{{courseid}}-14">
+                <div class="d-flex align-items-start">
+                 <div class="row mt-2">
+                    <div class="col-6">
+                        <p class="days">Start: {{startdate}}</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="days">End: {{enddate}}</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="days"><h6 class="button"><i class="bi bi-people" style="font-size: 1rem; margin-right: 5px;"></i>Students: <a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/getuser').init({userid:{{userid}},courseid:{{courseid}},type:'student' }) })(event)">{{studentcount}}</a></h6></p>
+                    </div>
+                    <div class="col-6">
+                        <p class="days"><h6 class="button"><i class="bi bi-file-earmark-check" style="font-size: 1rem; margin-right: 5px;"></i>Assignments: <a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/getassign').init({userid:{{userid}},courseid:{{courseid}} }) })(event)">{{assign_count}}</a></h6></p>
+                    </div>
+                    <div class="col-6">
+                        <p class="days"><h6 class="button"><i class="bi bi-question-circle" style="font-size: 1rem; margin-right: 5px;"></i>Quizzes: <a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/getquiz').init({userid:{{userid}},courseid:{{courseid}} }) })(event)">{{quiz_count}}</a></h6></p>
+                    </div>
+                    <div class="col-6">
+                        <p class="days"><h6 class="button"><i class="bi bi-chat-dots" style="font-size: 1rem; margin-right: 5px;"></i>Forums: <a style= "color: darkturquoise;cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/getforum').init({userid:{{userid}},courseid:{{courseid}} }) })(event)">{{forum_count}}</a></h6></p>
+                    </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  {{/records}}
+ </div>            
+</div>
+{{/viewtypeCard}}
+{{/response}}

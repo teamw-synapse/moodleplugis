@@ -1,0 +1,56 @@
+{{#response}}
+    {{#viewtypeCard}}
+<div class="container my-3">
+    
+    <div class="row">
+    <div class="col-sm">
+     <strong>ALL Users:</strong> {{totalcount}}
+    </div>
+    <div class="col-sm">
+      <strong>Active Users:</strong> {{totalactiveusers}}
+    </div>
+    <div class="col-sm">
+     <strong>In-Active Users:</strong> {{totalinactiveusers}}
+    </div>
+    <div class="col-sm">
+    <a href="https://e-learning-44dev.vit.edu.au/blocks/admindashboard/export.php?courses={{courses}}&roles={{roles}}&status={{status}}">Export</a>
+    </div>
+  </div>
+
+
+   <table class="flexible table table-striped table-hover generaltable generalbox">
+    <thead>
+      <tr>
+        <th class="header">Id</th>
+        <th class="header">First Name</th>
+        <th class="header">Last Name</th>
+        <th class="header">Email</th>
+        <th class="header">Role</th>
+        <th class="header">Edit</th>
+
+      </tr>
+    </thead>
+
+
+    <tbody>
+      {{#records}}
+        <tr>
+          <td>{{idnumber}}</td>
+          <td>{{firstname}}</td>
+          <td>{{lastname}}</td>
+          <td>{{email}}</td>
+          <td>{{role}}</td>
+          <td><a href = "{{url}}" target="_blank"> <i class="fas fa-edit mr-2" title ="Edit"></i></a>  <a href="#" title ="{{suspendedmethod}}"  ><i class="{{suspendedstatus}}" style="{{stylecss}}" title ="{{suspendedmethod}}" onclick="(function(e){ require('block_admindashboard/getuser').suspendConfirm({selector:'{{suspendedmethod}}',contextid:1, id:{{id}} }) })(event)"></i></a></td>
+        </tr>
+      {{/records}}
+      {{^records}}
+      No data available
+    {{/records}} 
+
+    </tbody>
+  </table>
+    </div>
+</div>
+{{/viewtypeCard}}
+{{/response}}
+

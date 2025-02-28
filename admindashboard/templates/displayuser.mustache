@@ -1,0 +1,13 @@
+
+<div class="d-flex justify-content-end mb-3" id="studentsearch_usermanagement">
+    <input type="text" class="form-control w-25" id="studentsearch" style="visibility: hidden;" placeholder="Search..." aria-label="Search"  onkeyup="(function(e){ require('block_admindashboard/main').search({selector:'studentremove',contextid:1 }) })(event)">
+  </div>
+<div class="d-inline-blocks card-paginate_wrap w-100 pull-left" id="manage_usermanagementusers" data-region="manage_usermanagementusers-preview-container">
+                        <div data-region="manage_usermanagementusers-count-container"></div>
+                        <div data-region="manage_usermanagementusers-list-container" id ="manage_usermanagementusers"></div>
+
+                         <span class="overlay-icon-container cardpaginate-loader {{$hiddenclass}}{{^visible}}hidden{{/visible}}{{/hiddenclass}}" data-region="overlay-icon-container">
+                                <span class="loading-icon icon-no-margin">{{#pix}} ajax-loader, local_rolemanagement, {{#str}} loading {{/str}} {{/pix}}</span>
+                            </span>
+                       
+                    </div>

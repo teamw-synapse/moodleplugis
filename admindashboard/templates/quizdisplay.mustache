@@ -1,0 +1,29 @@
+A{{#response}}
+    {{#viewtypeCard}}
+
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Quiz Name</th>
+      <th>Course Name</th>
+      <th>User Count</th>
+      <th>Submitted Count</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#records}}
+    <tr>
+
+      <td><a style= "color: darkturquoise; cursor: pointer;text-decoration: underline;" href="{{quiz_url}}" target="_blank">{{quiz_name}}</a></td>
+      <td>{{course_name}}</td>
+      <td><a style= "color: darkturquoise; cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/quizuser').init({quizid:{{quizid}},courseid:{{courseid}},userid:{{userid}} }) })(event)">{{user_count}}</a></td>
+       <td><a style= "color: darkturquoise; cursor: pointer; text-decoration: underline;" onclick="(function(e){ require('block_admindashboard/quizsub').init({quizid:{{quizid}},courseid:{{courseid}},userid:{{userid}} }) })(event)">{{submission_count}}</a></td>
+
+    </tr>
+   {{/records}}
+  </tbody>
+</table>
+ {{/viewtypeCard}}
+{{/response}}

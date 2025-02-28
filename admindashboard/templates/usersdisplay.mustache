@@ -1,0 +1,28 @@
+{{#response}}
+{{#viewtypeCard}}
+
+
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Student ID</th>
+      <th>Student Email</th>
+      <th>Course Status</th>
+     
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#records}}
+    <tr>
+      <td><a href="{{url}}" style= "color: darkturquoise; cursor: pointer;text-decoration: underline;" target="_blank">{{user_name}}</a></td>
+      <td>{{id_number}}</td>
+      <td>{{user_email}}</td>
+      <td>{{course_status}}</td>
+    </tr>
+   {{/records}}
+  </tbody>
+</table>
+{{/viewtypeCard}}
+{{/response}}

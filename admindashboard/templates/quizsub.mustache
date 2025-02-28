@@ -1,0 +1,32 @@
+{{#response}}
+    {{#viewtypeCard}}
+<table  id="data" class="generaltable">
+  <thead>
+    <tr>
+
+      <th>Student Name</th>
+      <th>Student ID</th>
+      <th>Quiz Name</th> 
+      <th>Submitted Date</th>
+      <th>Final Grade</th>
+      <th>Marking Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {{#records}}
+    <tr>
+
+      <td><a href="{{url}}" style= "color: darkturquoise; cursor: pointer;text-decoration: underline;" target="_blank">{{student_name}}</a></td>
+      <td>{{student_id}}</td>
+      <td>{{quiz_name}}</td>    
+      <td>{{submitted_date}}</td>
+      <td>{{final_grade}}</td>
+      <td><a style= "color: darkturquoise; cursor: pointer;" href="{{marking_grade}}" target="_blank">marking</a></td>
+
+    </tr>
+   {{/records}}
+  </tbody>
+</table>
+ {{/viewtypeCard}}
+{{/response}}
